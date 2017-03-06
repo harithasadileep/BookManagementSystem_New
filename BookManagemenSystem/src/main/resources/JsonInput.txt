@@ -1,0 +1,35 @@
+{
+	"publisherName":"Publisher1",
+	"address":"Hyd-sec",
+	"booksList":[
+	
+		{
+			
+			"author":"Dileep",
+		"title":"MInd Game",
+		"available":"Yes",
+		"price":"100"
+		}
+	]
+	
+}
+
+
+
+
+
+	{
+		"publisherName":"Publisher2",
+		"address":"Hyd-sec",
+		"booksList":[
+		
+			{
+				"bookId":"1",
+				"author":"Dileep",
+			"title":"MInd Game",
+			"available":"Yes",
+			"price":"100"
+			}
+		]
+		
+	}
