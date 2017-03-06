@@ -20,6 +20,7 @@ import com.bms.dao.BookDAO;
 import com.bms.dao.MemberDAO;
 import com.bms.dao.PublisherDAO;
 import com.bms.mapper.CustomBeanConverter;
+import com.bms.mapper.DozerHelper;
 import com.bms.model.BarrowDetails;
 import com.bms.model.Books;
 import com.bms.model.Member;
@@ -166,16 +167,17 @@ public class BookManagementController {
 	}
 	
 	@RequestMapping(value = "/getBarrowDetails", method = RequestMethod.GET)
-	public List<BarrowDetailsEntity> getBarrowDetails() {
-		barrowDetailsDAO.findAll();
-		return barrowDetailsDAO.findAll();
+	public List<BarrowDetails> getBarrowDetails() {
+		List<BarrowDetailsEntity> barrowDetailsEntityList = barrowDetailsDAO.findAll();
+		List<BarrowDetails>  barrowDetailsList = DozerHelper.map(customBeanConverter, barrowDetailsEntityList, BarrowDetails.class);
+		return barrowDetailsList;
 	}
 	
 	@RequestMapping(value = "/getBarrowDetails/{barrowId}", method = RequestMethod.GET)
-	public BarrowDetailsEntity getBarrowDetailsByid(@PathVariable("barrowId") int barrowId) {
+	public BarrowDetails getBarrowDetailsByid(@PathVariable("barrowId") int barrowId) {
 		BarrowDetailsEntity entity =  	barrowDetailsDAO.findOne(barrowId);
-		
-		return entity;
+		BarrowDetails barrowDetails = customBeanConverter.map(entity, BarrowDetails.class);
+		return barrowDetails;
 	}
 
 }
