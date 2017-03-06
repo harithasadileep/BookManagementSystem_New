@@ -29,8 +29,8 @@ public class BooksEntity implements Serializable {
 	@Column(name = "PRICE")
 	private String price;
 	
-	@OneToMany(mappedBy = "booksEntity")
-	private List<BarrowDetailsEntity> barrowDetailsEntity = new ArrayList<BarrowDetailsEntity>();
+	/*@OneToMany(mappedBy = "booksEntity")
+	private List<BarrowDetailsEntity> barrowDetailsEntity = new ArrayList<BarrowDetailsEntity>();*/
 	
 
 	public Integer getBookId() {
@@ -74,22 +74,12 @@ public class BooksEntity implements Serializable {
 	}
 
 	
-	public List<BarrowDetailsEntity> getBarrowDetailsEntity() {
+	/*public List<BarrowDetailsEntity> getBarrowDetailsEntity() {
 		return barrowDetailsEntity;
 	}
 
 	public void setBarrowDetailsEntity(List<BarrowDetailsEntity> barrowDetailsEntity) {
 		this.barrowDetailsEntity = barrowDetailsEntity;
 	}
-
-	
-	
-	
-
-	
-	
-	
-	
-	
-
+*/
 }

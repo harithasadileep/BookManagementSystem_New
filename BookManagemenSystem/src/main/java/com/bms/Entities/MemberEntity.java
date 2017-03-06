@@ -33,8 +33,8 @@ public class MemberEntity implements Serializable {
 	private Date expDate;
 	
 	
-	@OneToMany(mappedBy = "memberEntity")
-	private List<BarrowDetailsEntity> barrowDetailsEntity = new ArrayList<BarrowDetailsEntity>();
+	/*@OneToMany(mappedBy = "memberEntity")
+	private List<BarrowDetailsEntity> barrowDetailsEntity = new ArrayList<BarrowDetailsEntity>();*/
 
 	public Integer getMemberId() {
 		return memberId;
@@ -84,14 +84,14 @@ public class MemberEntity implements Serializable {
 		this.expDate = expDate;
 	}
 
-	
+	/*
 	public List<BarrowDetailsEntity> getBarrowDetailsEntity() {
 		return barrowDetailsEntity;
 	}
 
 	public void setBarrowDetailsEntity(List<BarrowDetailsEntity> barrowDetailsEntity) {
 		this.barrowDetailsEntity = barrowDetailsEntity;
-	}
+	}*/
 
 	
 	
